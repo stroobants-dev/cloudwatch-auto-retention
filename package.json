@@ -18,6 +18,7 @@
     "pre-compile": "npx projen pre-compile",
     "publish:github": "npx projen publish:github",
     "publish:npm": "npx projen publish:npm",
+    "publish:pypi": "npx projen publish:pypi",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
@@ -57,7 +58,19 @@
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
+    "@aws-cdk/aws-events": "^1.129.0",
+    "@aws-cdk/aws-events-targets": "^1.129.0",
+    "@aws-cdk/aws-iam": "^1.129.0",
+    "@aws-cdk/aws-lambda": "^1.129.0",
+    "@aws-cdk/core": "^1.129.0",
     "constructs": "^3.2.27"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-events": "^1.129.0",
+    "@aws-cdk/aws-events-targets": "^1.129.0",
+    "@aws-cdk/aws-iam": "^1.129.0",
+    "@aws-cdk/aws-lambda": "^1.129.0",
+    "@aws-cdk/core": "^1.129.0"
   },
   "bundledDependencies": [],
   "keywords": [
@@ -109,7 +122,12 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "python": {
+        "distName": "cloudwatch-auto-retention",
+        "module": "cdk_cloudwatch_auto_retention"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
