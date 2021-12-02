@@ -6,6 +6,36 @@
       "type": "build"
     },
     {
+      "name": "@aws-cdk/aws-events-targets",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-events",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-iam",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/aws-lambda",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/cloudformation-diff",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
+      "name": "@aws-cdk/core",
+      "version": "^1.129.0",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
