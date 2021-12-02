@@ -5,7 +5,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.129.0',
   defaultReleaseBranch: 'main',
   name: 'cloudwatch-auto-retention',
-  keywords: ['awscdk', 'aws', 'cdk', 'cloudwatch', 'retention', 'loggroups'],
+  keywords: ['awscdk', 'aws', 'cdk', 'cloudwatch', 'retention', 'loggroups', 'finops'],
   repository: 'https://github.com/stroobants-dev/cloudwatch-auto-retention',
   repositoryUrl: 'https://github.com/stroobants-dev/cloudwatch-auto-retention.git',
   python: {

@@ -85,6 +85,7 @@
     "awscdk",
     "cdk",
     "cloudwatch",
+    "finops",
     "loggroups",
     "retention"
   ],
