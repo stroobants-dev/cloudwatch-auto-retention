@@ -1,6 +1,6 @@
 {
   "name": "cloudwatch-auto-retention",
-  "description": "CloudWatch Auto Retention is a construct that creates a Lambda with a cronjob that checks if CloudWatch Logs are set to never-expire and if so, sets it to one month.",
+  "description": "CloudWatch Auto Retention is a construct that creates a Lambda with a cronjob that checks whether CloudWatch loggroups are set to never-expire. If so, the construct sets it to one month.",
   "repository": {
     "type": "git",
     "url": "https://github.com/stroobants-dev/cloudwatch-auto-retention"
