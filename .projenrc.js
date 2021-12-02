@@ -28,7 +28,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/cloudformation-diff',
   ], /* AWS CDK modules required for testing. */
   // deps: [],                        /* Runtime dependencies of this module. */
-  description: 'CloudWatch Auto Retention is a construct that creates a Lambda with a cronjob that checks if CloudWatch Logs are set to never-expire and if so, sets it to one month.', /* The description is just a string that helps people understand the purpose of the package. */
+  description: 'CloudWatch Auto Retention is a construct that creates a Lambda with a cronjob that checks whether CloudWatch loggroups are set to never-expire. If so, the construct sets it to one month.', /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],                     /* Build dependencies for this module. */
   // packageName: undefined,          /* The "name" in package.json. */
   // release: undefined,              /* Add release management to this project. */
