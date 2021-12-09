@@ -14,14 +14,14 @@ new CdkCloudwatchAutoRetention(scope: Construct, id: string)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`scope`](#cloudwatchautoretentioncdkcloudwatchautoretentionparameterscope)<span title="Required">*</span> | [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct) | *No description.* |
+| [`scope`](#cloudwatchautoretentioncdkcloudwatchautoretentionparameterscope)<span title="Required">*</span> | [`constructs.Construct`](#constructs.Construct) | *No description.* |
 | [`id`](#cloudwatchautoretentioncdkcloudwatchautoretentionparameterid)<span title="Required">*</span> | `string` | *No description.* |
 
 ---
 
 ##### `scope`<sup>Required</sup> <a name="cloudwatch-auto-retention.CdkCloudwatchAutoRetention.parameter.scope" id="cloudwatchautoretentioncdkcloudwatchautoretentionparameterscope"></a>
 
-- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+- *Type:* [`constructs.Construct`](#constructs.Construct)
 
 ---
 
