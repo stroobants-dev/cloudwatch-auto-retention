@@ -3,6 +3,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Tom Stroobants',
   authorAddress: 'tom@stroobants.dev',
   cdkVersion: '2.1.0',
+  majorVersion: 1,
   defaultReleaseBranch: 'main',
   name: 'cloudwatch-auto-retention',
   keywords: ['awscdk', 'aws', 'cdk', 'cloudwatch', 'retention', 'loggroups', 'finops'],
