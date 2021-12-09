@@ -1,26 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@aws-cdk/aws-events",
-      "type": "build"
-    },
-    {
-      "name": "@aws-cdk/aws-events-targets",
-      "type": "build"
-    },
-    {
-      "name": "@aws-cdk/aws-iam",
-      "type": "build"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda",
-      "type": "build"
-    },
-    {
-      "name": "@aws-cdk/core",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -116,26 +96,6 @@
     {
       "name": "typescript",
       "type": "build"
-    },
-    {
-      "name": "@aws-cdk/aws-events",
-      "type": "peer"
-    },
-    {
-      "name": "@aws-cdk/aws-events-targets",
-      "type": "peer"
-    },
-    {
-      "name": "@aws-cdk/aws-iam",
-      "type": "peer"
-    },
-    {
-      "name": "@aws-cdk/aws-lambda",
-      "type": "peer"
-    },
-    {
-      "name": "@aws-cdk/core",
-      "type": "peer"
     },
     {
       "name": "aws-cdk-lib",

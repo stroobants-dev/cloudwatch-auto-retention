@@ -14,11 +14,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   workflowNodeVersion: '^14.17.0',
   peerDeps: [
-    '@aws-cdk/core',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-events',
-    '@aws-cdk/aws-events-targets',
-    '@aws-cdk/aws-iam',
+    // 'aws-cdk-lib/',
+    // 'aws-cdk-lib/aws_events_targets',
+    // 'aws-cdk-lib/aws_events',
+    // 'aws-cdk-lib/aws_lambda',
+    // 'aws-cdk-lib/aws_iam',
+    'constructs',
+    'aws-cdk-lib',
+
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   /* AWS CDK modules required for testing. */
   // deps: [],                        /* Runtime dependencies of this module. */

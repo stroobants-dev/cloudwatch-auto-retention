@@ -1,10 +1,11 @@
-import { Rule, Schedule } from '@aws-cdk/aws-events';
-import { LambdaFunction } from '@aws-cdk/aws-events-targets';
-import { PolicyStatement, Policy } from '@aws-cdk/aws-iam';
-import { Code, Function, Runtime, Architecture } from '@aws-cdk/aws-lambda';
-import * as cdk from '@aws-cdk/core';
-export class CdkCloudwatchAutoRetention extends cdk.Construct {
-  constructor(scope: cdk.Construct, id: string) {
+import { Rule, Schedule } from 'aws-cdk-lib/aws-events';
+import { LambdaFunction } from 'aws-cdk-lib/aws-events-targets';
+import { PolicyStatement, Policy } from 'aws-cdk-lib/aws-iam';
+import { Code, Function, Runtime, Architecture } from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
+
+export class CdkCloudwatchAutoRetention extends Construct {
+  constructor(scope: Construct, id: string) {
     super(scope, id);
 
     // Create Lambda function

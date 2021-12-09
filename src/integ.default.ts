@@ -1,7 +1,7 @@
-import * as cdk from '@aws-cdk/core';
+import { App, Stack } from 'aws-cdk-lib';
 import { CdkCloudwatchAutoRetention } from './index';
 
-const app = new cdk.App();
-const stack = new cdk.Stack(app, 'CloudwatchAutoRetention');
+const app = new App();
+const stack = new Stack(app, 'CloudwatchAutoRetention');
 
 new CdkCloudwatchAutoRetention(stack, 'Cdk-Cloudwatch-Auto-Retention');
