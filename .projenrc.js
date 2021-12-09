@@ -1,8 +1,8 @@
-const { AwsCdkConstructLibrary } = require('projen');
-const project = new AwsCdkConstructLibrary({
+const { awscdk } = require('projen');
+const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Tom Stroobants',
   authorAddress: 'tom@stroobants.dev',
-  cdkVersion: '1.129.0',
+  cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   name: 'cloudwatch-auto-retention',
   keywords: ['awscdk', 'aws', 'cdk', 'cloudwatch', 'retention', 'loggroups', 'finops'],
@@ -12,21 +12,14 @@ const project = new AwsCdkConstructLibrary({
     distName: 'cloudwatch-auto-retention',
     module: 'cdk_cloudwatch_auto_retention',
   },
-  cdkDependencies: [
+  peerDeps: [
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda',
     '@aws-cdk/aws-events',
     '@aws-cdk/aws-events-targets',
     '@aws-cdk/aws-iam',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
-  cdkTestDependencies: [
-    '@aws-cdk/core',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/aws-events',
-    '@aws-cdk/aws-events-targets',
-    '@aws-cdk/aws-iam',
-    '@aws-cdk/cloudformation-diff',
-  ], /* AWS CDK modules required for testing. */
+  /* AWS CDK modules required for testing. */
   // deps: [],                        /* Runtime dependencies of this module. */
   description: 'CloudWatch Auto Retention is a construct that creates a Lambda with a cronjob that checks whether CloudWatch loggroups are set to never-expire. If so, the construct sets it to one month.', /* The description is just a string that helps people understand the purpose of the package. */
   // devDeps: [],                     /* Build dependencies for this module. */
