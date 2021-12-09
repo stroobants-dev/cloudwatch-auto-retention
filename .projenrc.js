@@ -12,6 +12,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'cloudwatch-auto-retention',
     module: 'cdk_cloudwatch_auto_retention',
   },
+  workflowNodeVersion: '^14.17.0',
   peerDeps: [
     '@aws-cdk/core',
     '@aws-cdk/aws-lambda',
