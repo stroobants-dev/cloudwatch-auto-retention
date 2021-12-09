@@ -25,13 +25,24 @@ yarn add cloudwatch-auto-retention
 
 ```typescript
 import * as cdk from '@aws-cdk/core';
-import { CdkCloudwatchAutoRetention } from 'cloudwatch-auto-retention';
+import { CloudwatchAutoRetention } from 'cloudwatch-auto-retention';
+import { RetentionDays } from 'aws-cdk-lib/aws-logs';
+import { Schedule } from 'aws-cdk-lib/aws-events';
 
 const mockApp = new cdk.App();
 const stack = new cdk.Stack(mockApp, '<your-stack-name>');
 
-new CdkCloudwatchAutoRetention(stack, 'cloudwatch-auto-retention');
+new CloudwatchAutoRetention(stack, 'cloudwatch-auto-retention');
 
+// With retention set
+new CloudwatchAutoRetention(stack, 'cloudwatch-auto-retention', {
+    retention: RetentionDays.ONE_MONTH
+});
+
+// With schedule for the Lambda function set
+new CloudwatchAutoRetention(stack, 'cloudwatch-auto-retention', {
+    schedule: Schedule.cron({ minute: '0', hour: '1', day: '1' })
+});
 ```
 
 ### Python
@@ -46,7 +57,7 @@ $ pip install cloudwatch-auto-retention
 
 ```python
 import aws_cdk.core as cdk
-from cdk_cloudwatch_auto_retention import CdkCloudwatchAutoRetention 
+from cdk_cloudwatch_auto_retention import CloudwatchAutoRetention 
 
 app = cdk.App()
 stack = cdk.Stack(app, "<your-stack-name>")
@@ -56,6 +67,6 @@ CdkCloudwatchAutoRetention(stack, "cloudwatch-auto-retention")
 
 ## Overview
 
-A Cloudwatch cron rule will trigger a Lambda that will go over all Cloudwatch Log Groups and check if the retention is never-expire. If so, it will change it to one month.
+A Cloudwatch cron rule will trigger a Lambda that will go over all Cloudwatch Log Groups and check if the retention is never-expire. If so, it will change it to one month default or whatever you set as `retention`.
 
 ![](https://raw.githubusercontent.com/stroobants-dev/cloudwatch-auto-retention/main/images/overview.png)

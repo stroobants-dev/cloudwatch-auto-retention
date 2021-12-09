@@ -1,5 +1,6 @@
 import boto3
 import logging
+import os
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -15,7 +16,7 @@ def handler(event, context):
     for log_group in log_groups:
         log_client.put_retention_policy(
             logGroupName=log_group,
-            retentionInDays=30
+            retentionInDays=int(os.environ.setdefault('retentionInDays', 30))
         )
     
     return {
